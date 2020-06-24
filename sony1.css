@@ -1,0 +1,174 @@
+html {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  scroll-behavior: smooth;
+}
+
+:root{
+  --red:  #CD2B48;
+  --white: #FFFFFF;
+}
+
+
+header{
+  z-index: 4;
+  display:flex;
+  background-color: var(--red);
+  justify-content: flex-end;
+  position: fixed;
+  align-items: center;
+  width:100%;
+  margin: -10px;
+
+}
+
+
+li,a,button{
+  font-size: 18px;
+  font-family: 'Frank Ruhl Libre', sans-serif;
+  color: white;
+  font-weight: normal;
+  text-decoration: none;
+  /* text-decoration: underline; */
+  transition: color 0.2s ease-in-out;
+}
+
+button{
+  width:165px;
+  height:50px;
+  font-weight:normal;
+  font-size: 30px;
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-left: 20px;
+  background-color: var(--red);
+  border-color: var(--white);
+  cursor:pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: var(--white);
+  color: var(--red);
+}
+
+.logo{
+  margin-right: auto;
+  margin-left: 10px;
+}
+.topbav {
+  display:flex;
+  position: fixed;
+  list-style: none;
+  position: fixed;
+  top:0;
+  width:100%;
+}
+
+/* top navigation bar list items*/
+.topnav li{
+  display: inline-block;
+  text-align: center;
+  align-items:center;
+  margin:10px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: var(--white);
+  color: var(--red);
+  border-radius: 5px;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: black;
+  border-radius: 10px;
+}
+
+
+@media screen and (min-width:900px) {
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    padding: 20px 20px;
+    width: 100%;
+  }
+  .grid2{
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    grid-gap: 20px;
+    padding: 20px 20px;
+    width: 100%;
+  }
+
+  .camera{
+    z-index: 0;
+    padding-top: 150px;
+    grid-column-start: 2;
+    grid-column-end: 6;
+    align-self: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  h1{
+    padding-top: 50px;
+    font-family: 'Frank Ruhl Libre', sans-serif;
+    color:black;
+    grid-column-start: 4;
+    grid-column-end: 6;
+    z-index:2;
+
+
+  }
+
+  .key{
+    z-index: -1;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+    align-self: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .side_view{
+    z-index: 1;
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    align-self: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+}
+
+/* mobile screen */
+@media screen and (min-width:0) and (max-width:900px) {
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-rows: repeat(5, 1fr); */
+    grid-gap: 20px;
+    width: 100%;
+
+  }
+
+
+
+
+
+
+}

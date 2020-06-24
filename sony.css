@@ -1,0 +1,441 @@
+html {
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  scroll-behavior: smooth;
+}
+
+:root{
+  --red:  #CD2B48;
+  --white: #FFFFFF;
+}
+
+
+header{
+  z-index: 4;
+  display:flex;
+  background-color: var(--red);
+  justify-content: flex-end;
+  position: fixed;
+  align-items: center;
+  width:100%;
+  margin: -10px;
+
+}
+
+
+li,a,button{
+  font-size: 18px;
+  font-family: 'Frank Ruhl Libre', sans-serif;
+  color: white;
+  font-weight: normal;
+  text-decoration: none;
+  /* text-decoration: underline; */
+  transition: color 0.2s ease-in-out;
+}
+
+button{
+  width:165px;
+  height:50px;
+  font-weight:normal;
+  font-size: 30px;
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-left: 20px;
+  background-color: var(--red);
+  border-color: var(--white);
+  cursor:pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover{
+  background-color: var(--white);
+  color: var(--red);
+}
+
+.logo{
+  margin-right: auto;
+  margin-left: 10px;
+}
+.topbav {
+  display:flex;
+  position: fixed;
+  list-style: none;
+  position: fixed;
+  top:0;
+  width:100%;
+}
+
+/* top navigation bar list items*/
+.topnav li{
+  display: inline-block;
+  text-align: center;
+  align-items:center;
+  margin:10px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: var(--white);
+  color: var(--red);
+  border-radius: 5px;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: black;
+  border-radius: 10px;
+}
+/* #img1{
+  align-self: center;
+} */
+
+/* desktop */
+@media screen and (min-width:900px) {
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    padding: 20px 20px;
+    width: 100%;
+  }
+  .grid2{
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    grid-gap: 20px;
+    padding: 20px 20px;
+    width: 100%;
+  }
+
+  .camera{
+    margin-top: 100px;
+    z-index: 0;
+    /* padding-top: 150px; */
+    grid-column-start: 2;
+    grid-column-end: 6;
+    align-self: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .key{
+    margin-top: 100px;
+    z-index: -1;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 1;
+
+    align-self: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .side_view{
+    z-index: 1;
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    align-self: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .faster{
+    z-index: 0;
+    /* padding-top: 150px; */
+    grid-column-start: 2;
+    grid-column-end: 6;
+    align-self: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  h1{
+    font-family: 'Frank Ruhl Libre', sans-serif;
+    color:white;
+    grid-column-start: 4;
+    grid-column-end: 7;
+    z-index:-5000;
+    display: inline-block;
+    text-align: left;
+
+    /* white-space: nowrap;
+    overflow:visible; */
+    /* text-overflow:inherit; */
+  }
+
+  /* smaller */
+  h2{
+    text-indent: 6em;
+    font-family: 'Frank Ruhl Libre', sans-serif;
+    color: rgb(205,43,72);
+    display: inline-block;
+  }
+
+/* carry the world */
+  .grid2 h4{
+    line-height: 1.5;
+    font-family: 'Frank Ruhl Libre', sans-serif;
+    color: rgb(205,43,72,67%);
+    display: inline-block;
+    align-self: flex-start;
+  }
+
+  h3{
+    margin-top: -1em;
+    font-family: 'Frank Ruhl Libre', sans-serif;
+    color: rgb(205,43,72);
+  }
+
+.container{
+  width:1280px;
+  min height: 500px;
+  background: #fff;
+  margin:70px auto 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container .box{
+  position:relative;
+  width:300px;
+  height: 360px;
+  background: rgb(205,43,72,60%);
+  margin:10px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.container .box .imageBox{
+  position: relative;
+  overflow: hidden;
+}
+
+.container .box .imageBox img{
+  max-width: 100%;
+  transition: transform:2s;
+}
+
+.container .box: hover .imageBox img{
+  transform: scale(1.5);
+}
+
+/* for text inside container */
+.container .box .details{
+  position:absolute;
+  top:10px;
+  left: 10px;
+  bottom: 10px;
+  background: rgb(0,0,0,60%);
+  transform: scaleY(0);
+  transition: transform .5s;
+}
+
+.container .box .details .content{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding:15px;
+  color: black;
+}
+.container .box .details .content h4{
+  font-family: 'Frank Ruhl Libre', sans-serif;
+  color: rgb(205,43,72);
+}
+.container .box: hover .details{
+  transform: scaleY(1);
+}
+
+input[type="file"]{
+  display: none;
+}
+label{
+  color = var(--red);
+}
+.upload{
+  z-index: 10;
+  align-self:  center;
+  justify-content: center;
+  margin-top: -400px;
+  margin-left: 300px;
+  position: relative;
+}
+h5{
+  font-family: 'Frank Ruhl Libre', sans-serif;
+  color: rgb(205,43,72);
+  text-align: left;
+  align-self: flex-end;
+  position: relative;
+}
+.camera2{
+  display: none;
+}
+
+}
+
+/* mobile screen */
+@media screen and (min-width:0) and (max-width:900px) {
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    padding: 20px 20px;
+    width: 100%;
+  }
+  .grid2{
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    grid-gap: 20px;
+    padding: 20px 20px;
+    width: 100%;
+  }
+
+  .camera2{
+    margin-top: 100px;
+    z-index: 0;
+    /* padding-top: 150px; */
+    grid-column-start: 2;
+    grid-column-end: 6;
+    align-self: center;
+    justify-content: center;
+    max-width: 100%;
+  }
+  .camera{
+    display: none;
+  }
+  .side_view{
+    display: none;
+  }
+  .key{
+    display: none;
+  }
+  .faster{
+    display:none;
+  }
+
+  h1{
+    display: none;
+  }
+  h2{
+    text-indent: 6em;
+    font-family: 'Frank Ruhl Libre', sans-serif;
+    color: rgb(205,43,72);
+    display: inline-block;
+    display:none;
+  }
+  h4{
+    display: none;
+  }
+
+/* carry the world */
+
+
+  h3{
+    margin-top: -1em;
+    font-family: 'Frank Ruhl Libre', sans-serif;
+    color: rgb(205,43,72);
+    display: none;
+  }
+
+.container{
+  width:1280px;
+  min height: 500px;
+  background: #fff;
+  margin:70px auto 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container .box{
+  position:relative;
+  width:300px;
+  height: 360px;
+  background: rgb(205,43,72,60%);
+  margin:10px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.container .box .imageBox{
+  position: relative;
+  overflow: hidden;
+}
+
+.container .box .imageBox img{
+  max-width: 100%;
+  transition: transform:2s;
+}
+
+.container .box: hover .imageBox img{
+  transform: scale(1.5);
+}
+
+/* for text inside container */
+.container .box .details{
+  position:absolute;
+  top:10px;
+  left: 10px;
+  bottom: 10px;
+  background: rgb(0,0,0,60%);
+  transform: scaleY(0);
+  transition: transform .5s;
+}
+
+.container .box .details .content{
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding:15px;
+  color: black;
+}
+.container .box .details .content h4{
+  font-family: 'Frank Ruhl Libre', sans-serif;
+  color: rgb(205,43,72);
+}
+.container .box: hover .details{
+  transform: scaleY(1);
+}
+
+input[type="file"]{
+  display: none;
+}
+label{
+  color = var(--red);
+}
+.upload{
+  z-index: 10;
+  align-self:  center;
+  justify-content: center;
+  margin-top: -400px;
+  margin-left: 300px;
+  position: relative;
+}
+h5{
+  font-family: 'Frank Ruhl Libre', sans-serif;
+  color: rgb(205,43,72);
+  text-align: left;
+  align-self: flex-end;
+  position: relative;
+}
+
+  }
+
+
+
+
+
+
+}
