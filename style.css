@@ -260,12 +260,14 @@ input[type="file"]{
 label{
   color = var(--red);
 }
+
+/* upload button for picture */
 .upload{
   z-index: 10;
-  align-self:  center;
-  justify-content: center;
-  margin-top: -400px;
-  margin-left: 300px;
+  align-self:  right;
+  justify-content:right;
+  /* margin-top: -400px;
+  margin-left: 300px; */
   position: relative;
 }
 h5{
