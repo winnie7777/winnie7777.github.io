@@ -263,6 +263,8 @@ h5{
   display: none;
 }
 
+
+}
 /* mobile screen */
 @media screen and (min-width:0) and (max-width:900px) {
   .grid{
@@ -287,12 +289,13 @@ h5{
     margin-top: 100px;
     z-index: 0;
     /* padding-top: 150px; */
-    grid-column-start: 2;
+    grid-column-start: 3;
     grid-column-end: 6;
     align-self: center;
     justify-content: center;
     max-width: 100%;
   }
+
   .camera{
     display: none;
   }
@@ -303,9 +306,8 @@ h5{
     display: none;
   }
   .faster{
-    display:none;
+    display: none;
   }
-
   h1{
     display: none;
   }
@@ -414,12 +416,6 @@ h5{
   align-self: flex-end;
   position: relative;
 }
-
-
-
-
-
-
 
 
 }
