@@ -88,9 +88,6 @@ button:hover{
   color: black;
   border-radius: 10px;
 }
-/* #img1{
-  align-self: center;
-} */
 
 /* desktop */
 @media screen and (min-width:900px) {
@@ -101,21 +98,19 @@ button:hover{
     padding: 20px 20px;
     width: 100%;
   }
+
   .grid2{
     display: grid;
-
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, 1fr);
-
     grid-gap: 20px;
     padding: 20px 20px;
     width: 100%;
   }
-
   .camera{
     margin-top: 100px;
     z-index: 0;
-    /* padding-top: 150px; */
+    padding-bottom: 150px;
     grid-column-start: 2;
     grid-column-end: 6;
     align-self: center;
@@ -130,7 +125,6 @@ button:hover{
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 1;
-
     align-self: center;
     justify-content: center;
     max-width: 100%;
@@ -144,8 +138,10 @@ button:hover{
     grid-row-end: 2;
     align-self: center;
     justify-content: center;
+    position: relative;
     max-width: 100%;
   }
+
   .faster{
     z-index: 0;
     /* padding-top: 150px; */
@@ -164,10 +160,6 @@ button:hover{
     z-index:-5000;
     display: inline-block;
     text-align: left;
-
-    /* white-space: nowrap;
-    overflow:visible; */
-    /* text-overflow:inherit; */
   }
 
   /* smaller */
@@ -176,6 +168,8 @@ button:hover{
     font-family: 'Frank Ruhl Libre', sans-serif;
     color: rgb(205,43,72);
     display: inline-block;
+    grid-row-start: 1;
+    grid-row-end: 1;
   }
 
 /* carry the world */
@@ -183,8 +177,13 @@ button:hover{
     line-height: 1.5;
     font-family: 'Frank Ruhl Libre', sans-serif;
     color: rgb(205,43,72,67%);
-    display: inline-block;
-    align-self: flex-start;
+    display: inline;
+    align-self: stretch;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-left: 250px;
   }
 
   h3{
@@ -260,14 +259,12 @@ input[type="file"]{
 label{
   color = var(--red);
 }
-
-/* upload button for picture */
 .upload{
   z-index: 10;
-  align-self:  right;
-  justify-content:right;
-  /* margin-top: -400px;
-  margin-left: 300px; */
+  align-self:  center;
+  justify-content: center;
+  margin-top: -400px;
+  margin-left: 300px;
   position: relative;
 }
 h5{
@@ -277,7 +274,7 @@ h5{
   align-self: flex-end;
   position: relative;
 }
-.camera2{
+.camera_mobile{
   display: none;
 }
 
@@ -303,7 +300,7 @@ h5{
     width: 100%;
   }
 
-  .camera2{
+  .camera_mobile{
     margin-top: 100px;
     z-index: 0;
     /* padding-top: 150px; */
@@ -341,7 +338,6 @@ h5{
   }
 
 /* carry the world */
-
 
   h3{
     margin-top: -1em;
